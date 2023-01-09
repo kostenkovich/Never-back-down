@@ -1,0 +1,139 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    background-color: aliceblue;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    padding: 3px 8px;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+input{
+    padding: 3px 8px;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topMenu{
+    display: block;
+    margin: 0 2%;
+    width: 96%;
+    background-color: aliceblue;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+}
+
+.conteinerHeader{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo{
+    width: 315px;
+    height: 70px;
+    background-image: url(../media/img/pngwing.com\ \(5\).png);
+    background-repeat: no-repeat;
+    background-position: center -2px;
+    background-size: cover;
+}
+
+.formTopMenu{
+    display: inline-block;
+    width: 45%;
+    position: relative;
+    margin: 0 0 0 6%;
+    height: 70px;
+}
+
+.seachInput{
+    display: inline-block;
+    width: calc(100% - 51px);
+    height: 25px;
+    margin: 17px 0 0 0;
+    padding: 4px 8px 2px 12px;
+    border: none;
+    font-size: 0.65em;
+    border-bottom: 1px solid rgb(84 84 84);
+}
+
+.seachInput::placeholder{
+    
+    color: rgb(138, 138, 138);
+}
+
+.seachButton{
+    display: inline-block;
+    height: 32px;
+    width: 66px;
+    position: absolute;
+    padding-bottom: 2px;
+    top: 17px;
+    border: none;
+    border-bottom: 1px solid rgb(84 84 84);
+    font-size: 0.65em;
+    cursor: pointer;
+}
+
+.contTopHelp{
+    display: inline-block;
+    margin: 2px 0 0 8%;
+}
+
+.helpBtn{
+    font-size: 0.7em;
+    display: flex;
+    height: 64px;
+    align-items: center;
+}
+
+.cart{
+    display: inline-block;
+    height: 70px;
+    width: calc(5% + 60px);
+    margin: 13px 0% 0 5%;
+}
+
+.imgCart{
+
+}
+
+.myCart{
+    font-size: 0.7em;
+    width: 100%;
+    border-color: rgb(84 84 84);
+}

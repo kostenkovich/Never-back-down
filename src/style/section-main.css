@@ -1,0 +1,146 @@
+.allContent{
+    display: block;
+    margin: 0 2%;
+    width: 96%;
+    
+}
+
+.firstBlock{
+
+}
+
+.backGrFirst{
+    margin-top: 70px;
+    background-color: #e1eef5;
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+.contText{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.textSecondBlock{
+    padding: 20px 0;
+    width: 70%;
+    height: fit-content;
+    font-size: 1em;
+    text-align: center;
+    position: absolute;
+    top: 175px;
+    transition: 800ms ease;
+    transition-delay: 800ms;
+    
+}
+
+.secondBlock{
+    overflow: hidden;
+}
+
+.backGrSecond{
+    margin: 10px 0 0 0;
+    background-color: rgb(182, 197, 214);
+    padding: 70px 0 0px 0;
+}
+
+.conteinerProduct{
+    overflow: hidden;
+    position: relative;
+}
+
+.nameSecondBlock{
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.4em;
+    color: rgb(48, 48, 48);
+    top: 60px;
+    position: absolute;
+    transition: 800ms ease;
+    transition-delay: 2s;
+}
+
+.contNameSec{
+    margin-bottom: 80px;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ulProduct{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.ulProduct a{
+    
+    margin: 0 2% 0 2%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 410px;
+    transition-delay: 400ms;
+    transition: 800ms ease;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #898989;
+    background-color: aliceblue;
+}
+
+.ulProduct a:hover{
+    transition: 400ms ease;
+    transition-delay: 0ms;
+    box-shadow: 0 0 10px #4d4d4d;
+}
+
+.ulProduct a:hover .nameProduct{
+    text-decoration: underline 1px;
+}
+
+.ulProduct a:hover .price{
+    text-decoration: underline 1px;
+}
+
+.ulProduct .product{
+    padding: 20px 0;
+    width: 270px;
+}
+
+
+.imgProduct{
+    
+    margin-bottom: 20px;
+}
+
+.nameProduct{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+
+}
+
+.price{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.buyProduct{
+    font-size: 0.75em;
+    padding: 3px 35px;
+    cursor: pointer;
+    
+}
+
+.buyProduct:hover{
+    background-color: rgb(24, 24, 24);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    transition: 400ms ;
+}
