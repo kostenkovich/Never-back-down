@@ -62,6 +62,7 @@ const SectionMain = function(props){
                       {
                         props.product.map(prod => <Product key={prod.id} className="product" product={prod}/>)
                       }
+                      <button></button>
                   </ul>
                 </div>
               </div>
