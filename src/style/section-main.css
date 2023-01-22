@@ -144,3 +144,81 @@
     border: 1px solid aliceblue;
     transition: 400ms ;
 }
+
+
+
+
+
+.thirdBlock{
+
+}
+
+.backGrThird{
+
+}
+
+.conteinerThird{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.contNameThi{
+    margin: 65px 0 65px 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.nameThirdBlock{
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.4em;
+    color: rgb(48, 48, 48);
+    top: 60px;
+    position: absolute;
+    transition: 800ms ease;
+    transition-delay: 2s;
+}
+
+.ulProduct_2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.ulProduct_2 a{
+    
+    margin: 0 2% 0 2%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition-delay: 400ms;
+    transition: 800ms ease;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #898989;
+    background-color: aliceblue;
+}
+
+.ulProduct_2 a:hover{
+    transition: 400ms ease;
+    transition-delay: 0ms;
+    box-shadow: 0 0 10px #4d4d4d;
+}
+
+.ulProduct_2 a:hover .nameProduct{
+    text-decoration: underline 1px;
+}
+
+.ulProduct_2 a:hover .price{
+    text-decoration: underline 1px;
+}
+
+.ulProduct_2 .product{
+    padding: 20px 0;
+    width: 270px;
+}

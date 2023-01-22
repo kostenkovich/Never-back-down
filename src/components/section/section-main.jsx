@@ -21,10 +21,65 @@ const SectionMain = function(props){
       }
     }
 
+    function rightUl_2(){
+      let lenght = window.innerWidth
+      document.querySelector(".ulProduct_2").style.marginLeft = lenght + "px"
+      let height_block_2 = document.querySelector(".ulProduct_2").offsetHeight;
+      document.querySelector(".conteinerThird").style.height = (height_block_2 + 200 + "px");
+    }
+
+    function viewRaitedColl() {
+      let timer = 0;
+      for(let i = 1; i <= props.product.length; i++){
+        timer = timer + 300;
+        console.log(timer)
+        setTimeout(() => document.querySelector("#product" + i).style.marginTop = "-20px", timer)
+      }
+    }
+
     useEffect(() => {
       showText_1();
       viewNewColl();
+      rightUl_2();
     }, [])
+
+
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect();
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+
+    function scrollVisible() {
+        let elements = document.querySelectorAll("#scroll-el");
+        let elements_2 = document.querySelectorAll(".scroll-el");
+        let elements_all = [...elements,  ...elements_2];
+        console.log(elements_all);
+        console.log("1")
+
+        for(let i = 0; i < elements_all.length; i++){
+            const animItem = elements_all[i];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+            console.log("11")
+            let animItemPoint = window.innerHeight - animItemHeight / animStart
+            
+              if(animItemHeight > window.innerHeight){
+                  animItemPoint = window.innerHeight - window.innerHeight / animStart
+              }
+
+              if((window.pageYOffset > animItemOffset - animItemPoint) && window.pageYOffset < (animItemOffset + animItemHeight)){
+                  console.log("111")
+              }
+
+
+        }
+    }
+    
+    
     
     return(
         <section>
@@ -56,13 +111,13 @@ const SectionMain = function(props){
               <div className="backGrThird">
                 <div className="conteinerThird">
                   <div className="contNameThi">
-                    <div className="nameSecondBlock">Popular flavors</div>
+                    <div className="nameThirdBlock" id="scroll-el">Popular flavors</div>
                   </div>
-                  <ul className='ulProduct'>
+                  <ul className='ulProduct_2'>
                       {
                         props.product.map(prod => <Product key={prod.id} className="product" product={prod}/>)
                       }
-                      <button></button>
+                      
                   </ul>
                 </div>
               </div>

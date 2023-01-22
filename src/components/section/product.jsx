@@ -16,7 +16,7 @@ const Product = function(props){
     
 
     return(
-        <Link to={"/product/" + props.product.id} id={"product" + props.product.id}>
+        <Link to={"/product/" + props.product.id} className="scroll-el" id={"product" + props.product.id}>
             <div className="product">
                 <img className="imgProduct" src={props.product.photo.name} height={props.product.photo.height} width={props.product.photo.width + ""}/>
                 <div className="nameProduct">{props.product.name}</div>
