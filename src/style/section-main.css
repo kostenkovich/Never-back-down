@@ -150,17 +150,20 @@
 
 
 .thirdBlock{
+    margin-top: 10px;
+}
 
+.contNameThi{
+    
 }
 
 .backGrThird{
-
+    background-color: #e5ddff;
 }
 
 .conteinerThird{
     position: relative;
     overflow: hidden;
-    height: 400px;
 }
 
 .contNameThi{
@@ -180,7 +183,7 @@
     top: 60px;
     position: absolute;
     transition: 800ms ease;
-    transition-delay: 2s;
+    transition-delay: 0.8s;
 }
 
 .ulProduct_2{
@@ -188,6 +191,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
+    transition: 1s ease;
 }
 
 .ulProduct_2 a{

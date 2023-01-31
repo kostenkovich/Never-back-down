@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 
-import Product from './product';
+import Product from './product/product';
+import Product_2 from './product/product_2';
 
 const SectionMain = function(props){
 
@@ -21,11 +22,13 @@ const SectionMain = function(props){
       }
     }
 
+    let lenght_px_table_2 = window.innerWidth + 80;
+
     function rightUl_2(){
-      let lenght = window.innerWidth
-      document.querySelector(".ulProduct_2").style.marginLeft = lenght + "px"
-      let height_block_2 = document.querySelector(".ulProduct_2").offsetHeight;
-      document.querySelector(".conteinerThird").style.height = (height_block_2 + 200 + "px");
+        document.querySelector(".ulProduct_2").style.marginLeft = lenght_px_table_2 + "px";
+        let heightThiUl = document.querySelector(".ulProduct_2").offsetHeight;
+        console.log(heightThiUl)
+        document.querySelector(".conteinerThird").style.height = heightThiUl * 1.5 - 10 + "px";
     }
 
     function viewRaitedColl() {
@@ -37,46 +40,33 @@ const SectionMain = function(props){
       }
     }
 
+
+    function offset(el) {
+      const rect = el.getBoundingClientRect();
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+
     useEffect(() => {
       showText_1();
       viewNewColl();
       rightUl_2();
     }, [])
 
-
-
-    function offset(el) {
-        const rect = el.getBoundingClientRect();
-        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    function product_2_view() {
+        let element_1 = document.querySelector(".nameThirdBlock");
+        let element_2 = document.querySelector(".contNameThi");
+        const rect = document.querySelector(".contNameThi").getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-    }
+        console.log(rect);
+          if(rect - windowHeight < 0){
+            document.querySelector(".ulProduct_2").style.marginLeft = "0px";
+            document.querySelector(".nameThirdBlock").style.top = "0px";
+          }
+        
 
-    function scrollVisible() {
-        let elements = document.querySelectorAll("#scroll-el");
-        let elements_2 = document.querySelectorAll(".scroll-el");
-        let elements_all = [...elements,  ...elements_2];
-        console.log(elements_all);
-        console.log("1")
-
-        for(let i = 0; i < elements_all.length; i++){
-            const animItem = elements_all[i];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-            console.log("11")
-            let animItemPoint = window.innerHeight - animItemHeight / animStart
-            
-              if(animItemHeight > window.innerHeight){
-                  animItemPoint = window.innerHeight - window.innerHeight / animStart
-              }
-
-              if((window.pageYOffset > animItemOffset - animItemPoint) && window.pageYOffset < (animItemOffset + animItemHeight)){
-                  console.log("111")
-              }
-
-
-        }
     }
     
     
@@ -95,7 +85,7 @@ const SectionMain = function(props){
             </div>
             <div className="secondBlock">
               <div className="backGrSecond">
-                <div className="conteinerProduct">
+                <div className="conteinerProduct"  onClick={product_2_view}>
                     <div className="contNameSec">
                       <div className="nameSecondBlock">New collection</div>
                     </div>
@@ -113,12 +103,11 @@ const SectionMain = function(props){
                   <div className="contNameThi">
                     <div className="nameThirdBlock" id="scroll-el">Popular flavors</div>
                   </div>
-                  <ul className='ulProduct_2'>
-                      {
-                        props.product.map(prod => <Product key={prod.id} className="product" product={prod}/>)
-                      }
-                      
-                  </ul>
+                    <ul className='ulProduct_2'>
+                        {
+                          props.product.map(prod => <Product_2 key={prod.id} className="product" product={prod}/>)
+                        }
+                    </ul>
                 </div>
               </div>
             </div>
