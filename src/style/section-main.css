@@ -1,17 +1,15 @@
 .allContent{
     display: block;
-    margin: 0 2%;
-    width: 96%;
     
 }
 
 .firstBlock{
-
+    margin-top: 70px;
+    background-color: #e1eef5;
 }
 
 .backGrFirst{
-    margin-top: 70px;
-    background-color: #e1eef5;
+    padding: 0 2%;
     overflow: hidden;
     height: fit-content;
     position: relative;
@@ -42,7 +40,6 @@
 }
 
 .backGrSecond{
-    margin: 10px 0 0 0;
     background-color: rgb(182, 197, 214);
     padding: 70px 0 0px 0;
 }
@@ -149,8 +146,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 .thirdBlock{
-    margin-top: 10px;
+
 }
 
 .contNameThi{
@@ -162,6 +171,7 @@
 }
 
 .conteinerThird{
+    margin: 0 2%;
     position: relative;
     overflow: hidden;
 }
@@ -206,6 +216,7 @@
     border-radius: 3px;
     box-shadow: 0 0 10px #898989;
     background-color: aliceblue;
+    margin-right: 14%;
 }
 
 .ulProduct_2 a:hover{
@@ -225,4 +236,138 @@
 .ulProduct_2 .product{
     padding: 20px 0;
     width: 270px;
+}
+
+
+
+
+
+
+
+
+.forthBlock{
+    height: fit-content;
+    position: relative;
+}
+
+.nameForth{
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.4em;
+    color: rgb(48, 48, 48);
+    margin: 65px 0;
+    transition: 800ms ease;
+    transition-delay: 0.8s;
+}
+
+.brends{
+    width: 85%;
+    margin: 0 0% 0 10%;
+}
+
+.brends li{
+    text-align: center;
+    display: inline-block;
+    padding: 8px 15px;
+    border: solid 1px rgb(48, 48, 48);
+    font-size: 1.5em;
+    font-weight: 200;
+    cursor: pointer;
+    margin: 0 5% 5% 0;
+}
+
+.brends li:hover{
+    background-color: rgb(48, 48, 48);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    transition: 400ms ;
+}
+
+.moreBrendsName{
+    width: 100%;
+    font-size: 1.4em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 40px 0;
+    margin-top: -20px;
+    cursor: pointer;
+    color: rgb(48, 48, 48);
+}
+.moreBrendsName:hover{
+    text-decoration: underline 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.conteinerFooter{
+    margin-top: 75px;
+    background-color: rgb(0 0 0 / 92%);
+    padding: 0 2%;
+    box-shadow: 0 0 10px #1a1a1a;
+}
+
+.conteinerFooter li{
+    list-style-type: none;
+    color: #818181;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.8em;
+    font-weight: 300;
+    cursor: pointer;
+    
+}
+
+.conteinerFooter li:hover{
+    text-decoration: underline 1px;
+}
+
+.contacts{
+    min-width: 33.3%;
+    padding: 5px 0 10px 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.contactsUl{
+
+}
+
+.help{
+    min-width: 33.3%;
+    padding: 5px 0 10px 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.helpUl{
+
+}
+
+.social{
+    min-width: 33.3%;
+    padding: 5px 0 10px 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.socialUl{
+
 }

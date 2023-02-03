@@ -22,13 +22,19 @@ const SectionMain = function(props){
       }
     }
 
-    let lenght_px_table_2 = window.innerWidth + 80;
 
     function rightUl_2(){
-        document.querySelector(".ulProduct_2").style.marginLeft = lenght_px_table_2 + "px";
+        
         let heightThiUl = document.querySelector(".ulProduct_2").offsetHeight;
         console.log(heightThiUl)
         document.querySelector(".conteinerThird").style.height = heightThiUl * 1.5 - 10 + "px";
+
+        for (let i = 1; i <= props.product.length; i++) { 
+          document.querySelector("#product-table-2-" + i).style.transition = "1.5s ease";
+        }
+        let marginProduct = Math.round(Number(window.getComputedStyle(document.querySelector("#product-table-2-1"), null).getPropertyValue("margin-right").slice(0, -2))) + Math.round(Number(window.getComputedStyle(document.querySelector("#product-table-2-1"), null).getPropertyValue("margin-left").slice(0, -2)));
+        document.querySelector(".ulProduct_2").style.marginLeft = window.innerWidth + marginProduct * 4 + "px";
+        console.log(marginProduct);
     }
 
     function viewRaitedColl() {
@@ -64,6 +70,10 @@ const SectionMain = function(props){
           if(rect - windowHeight < 0){
             document.querySelector(".ulProduct_2").style.marginLeft = "0px";
             document.querySelector(".nameThirdBlock").style.top = "0px";
+              for (let i = 1; i <= props.product.length; i++) {
+                document.querySelector("#product-table-2-" + i).style.marginRight = "2%";
+
+              }
           }
         
 
@@ -110,6 +120,26 @@ const SectionMain = function(props){
                     </ul>
                 </div>
               </div>
+            </div>
+            <div className="forthBlock">
+              <div className="nameForth">Your brends</div>
+              <ul className='brends'>
+                <li>Chanel</li>
+                <li>Escentric Molecules</li>
+                <li>Lancome</li>
+                <li>Lanvin</li>
+                <li>Dolce & Gabbana</li>
+                <li>Versace</li>
+                <li>Givenchy</li>               
+                <li>Gucci</li>
+                <li>Lianore</li>
+                <li>Parsel</li>
+                <li>Woody</li>
+                <li>Arctic</li>
+                <li>Flip Moris</li>
+                <li>Galisia</li>          
+              </ul>
+              <div className="moreBrendsName">And more...</div>
             </div>
           </div>
         </section>
