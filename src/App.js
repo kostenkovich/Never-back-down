@@ -8,6 +8,8 @@ import aromo_4 from './media/img/pngwing.com(4).png';
 
 import './style/header.css'
 import './style/section-main.css'
+import './style/footer.css'
+import './style/adaptiv.css'
 
 import HeaderFooter from "./components/header-footer/header-footer";
 import SectionMain from "./components/section/section-main";
