@@ -1,3 +1,14 @@
+@media(min-width: 1439px){
+    .textSecondBlock{
+        width: 50%;
+        
+    }
+    .logo{
+        margin-right: 2%;
+
+    }
+}
+
 @media(max-width: 1025px){
     .logo{
         background-position: center 1px;
@@ -77,6 +88,9 @@
 
     .conteinerHeader {
         height: 125px;
+    }
+    .firstBlock{
+        margin-top: 125px;
     }
 }
 

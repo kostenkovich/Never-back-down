@@ -6,7 +6,6 @@ const Product = function(props){
 
     function secondBlock(){
         let height_block_2 = document.querySelector(".product").offsetHeight;
-        console.log(height_block_2)
         document.querySelector(".conteinerProduct").style.height = (height_block_2 + 130 + "px");
     }
 

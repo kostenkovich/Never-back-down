@@ -36,6 +36,34 @@ function onloadUseEff() {
     window.addEventListener('scroll', loadItem(".nameForth", brendsMainView));
 }
 
+function adaptiv_js(margin){
+  
+  let heightFirstUl = document.querySelector("#product-table-2-1").offsetHeight;
+      
+  document.querySelector(".conteinerThird").style.height = heightFirstUl * 1.48 + "px";
+
+  if(window.innerWidth < 1286){
+    document.querySelector(".conteinerThird").style.height = heightFirstUl * 2.5 + margin - 20 + "px";
+    document.querySelector(".conteinerProduct").style.height = (heightFirstUl + margin * 1.5) * 2 + "px";
+    document.querySelector(".ulProduct_2").style.display = "inline-block";
+    document.querySelector(".ulProduct_2").style.textAlign = "center";
+  }
+  if(window.innerWidth < 1020){
+    document.querySelector(".conteinerProduct").style.height = (heightFirstUl + margin * 1.8) * 2 + "px";
+  }
+  if(window.innerWidth < 695){
+    document.querySelector(".conteinerProduct").style.height = (heightFirstUl + margin * 2.3) * 2 + "px";
+  }
+  if(window.innerWidth < 587){
+    document.querySelector(".conteinerProduct").style.height = (heightFirstUl + margin * 2.1) * 3 + "px";
+    document.querySelector(".ulProduct").lastChild.style.display = "none";
+    document.querySelector(".ulProduct_2").lastChild.style.display = "none";
+    document.querySelector(".conteinerThird").style.height = (heightFirstUl * 3.5 + margin * 2) + "px";
+  }
+  if(window.innerWidth < 400){
+    document.querySelector(".conteinerProduct").style.height = (heightFirstUl + margin * 2.3) * 3 + "px";
+}
+}
 
 
 export {
@@ -43,4 +71,5 @@ export {
     productBlockSecondView,
     loadItem,
     brendsMainView,
+    adaptiv_js,
 }

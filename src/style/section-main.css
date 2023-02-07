@@ -200,6 +200,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: none;
     position: absolute;
     transition: 1s ease;
 }

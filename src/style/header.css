@@ -54,7 +54,7 @@ input{
     position: fixed;
     z-index: 1;
     top: 0px;
-    box-shadow: 0 0 10px #1a1a1a;
+    box-shadow: 0 0 7px #000000;
 }
 
 .conteinerHeader{
@@ -120,6 +120,8 @@ input{
     display: flex;
     height: 64px;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .cart{
@@ -127,6 +129,7 @@ input{
     height: 70px;
     width: calc(5% + 60px);
     margin: 13px 0% 0 5%;
+
 }
 
 .imgCart{
@@ -137,4 +140,5 @@ input{
     font-size: 0.7em;
     width: 100%;
     border-color: rgb(84 84 84);
+    cursor: pointer;
 }

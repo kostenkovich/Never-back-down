@@ -53,25 +53,3 @@
 .socialUl{
 
 }
-
-
-@media (max-width: 690px){
-    .textSecondBlock{
-        top: 250px;
-    }
-
-}
-
-@media (max-width: 478px){
-    .textSecondBlock{
-        top: 280px;
-    }
-
-}
-
-@media (max-width: 400px){
-    .textSecondBlock{
-        top: 320px;
-    }
-
-}
